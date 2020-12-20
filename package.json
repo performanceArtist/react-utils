@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "build": "tsc",
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "test:watch": "jest --watch",
     "prettify": "prettier --write src/**/*.{ts,tsx,js,jsx,css,scss,json}",
     "check-types": "tsc -p . --noEmit",
