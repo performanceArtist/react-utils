@@ -23,5 +23,5 @@ export const useSubscription = (
 ) => {
   const sub = useMemo(() => s(), deps);
 
-  useEffect(() => () => sub.unsubscribe());
+  useEffect(() => () => sub.unsubscribe(), [sub]);
 };
