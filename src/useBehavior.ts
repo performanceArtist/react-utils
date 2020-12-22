@@ -1,4 +1,4 @@
-import { Behavior } from '@performance-artist/store';
+import { Behavior } from '@performance-artist/rx-utils';
 import { pipe } from 'fp-ts/lib/pipeable';
 import { useObservable } from './useObservable';
 import { useMemo } from 'react';
