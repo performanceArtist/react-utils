@@ -1,6 +1,7 @@
 import { pipe } from 'fp-ts/lib/pipeable';
 import { either } from 'fp-ts';
 import { requestResult, RequestResult } from '@performance-artist/fp-ts-adt';
+import { memoId } from 'memoId';
 
 type RequestStateRendererProps<T> = {
   data: RequestResult<T>;
@@ -10,7 +11,9 @@ type RequestStateRendererProps<T> = {
   onError: (error: Error) => JSX.Element;
 };
 
-export function makeRequestStateRenderer<T>(props: RequestStateRendererProps<T>) {
+export const RequestStateRenderer = memoId(function<T>(
+  props: RequestStateRendererProps<T>,
+) {
   const { data, onSuccess, onError, onPending, onInitial } = props;
 
   return pipe(
@@ -25,4 +28,4 @@ export function makeRequestStateRenderer<T>(props: RequestStateRendererProps<T>)
       }
     }, onSuccess),
   );
-}
+});
