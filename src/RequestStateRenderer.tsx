@@ -1,7 +1,7 @@
 import { pipe } from 'fp-ts/lib/pipeable';
 import { either } from 'fp-ts';
 import { requestResult, RequestResult } from '@performance-artist/fp-ts-adt';
-import { memoId } from 'memoId';
+import { memoId } from './memoId';
 
 type RequestStateRendererProps<T> = {
   data: RequestResult<T>;
