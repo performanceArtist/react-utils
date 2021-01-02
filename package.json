@@ -1,8 +1,12 @@
 {
   "name": "@performance-artist/react-utils",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "React utilities",
-  "keywords": ["react", "rxjs", "fp-ts"],
+  "keywords": [
+    "react",
+    "rxjs",
+    "fp-ts"
+  ],
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
