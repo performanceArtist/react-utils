@@ -17,3 +17,6 @@ export const TestContainer = withHook(Test)(() => {
 });
 
 const rendered = <TestContainer />;
+
+const Same = withHook(Test)(() => {});
+const sameRendered = <Same content="" />;
