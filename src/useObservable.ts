@@ -1,10 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useMemo, useState } from 'react';
 import { Observable } from 'rxjs';
 
 export const useObservable = <A>(fa: Observable<A>, initial: A): A => {
   const [value, setValue] = useState(initial);
 
-  useEffect(() => {
+  useMemo(() => {
     const subscription = fa.subscribe(setValue);
     return () => subscription.unsubscribe();
   }, []);
